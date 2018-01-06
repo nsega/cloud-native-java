@@ -8,11 +8,8 @@
 
 [Spring Initilizr](http://start.spring.io/)
 
+- ref URL
 
-f0303c40-09d0-4924-a916-8aef24e47708
+[What is username and password when starting Spring Boot with Tomcat?](https://stackoverflow.com/questions/37285016/what-is-username-and-password-when-starting-spring-boot-with-tomcat)
 
-
-https://stackoverflow.com/questions/37285016/what-is-username-and-password-when-starting-spring-boot-with-tomcat
-
-
-https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-security
+[boot-features-security](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-security)
