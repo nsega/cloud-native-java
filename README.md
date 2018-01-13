@@ -16,6 +16,8 @@
 
 ## Chap 3. Twelve-Factor Application Style Configuration
 
+- [Twelve-Factor application manifesto](https://12factor.net/config)
+
 ## Chap 4. Testing
 
 ## Chap 5. The Forklifted Application
