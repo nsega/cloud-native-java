@@ -31,16 +31,11 @@ The goal of this chapter was to address common concerns typical of efforts to mo
 
 ## Chap 6. REST APIs
 
-Level 0 : 
-
-Callable<T>
-Google Protocol Buffers
-
 ### Error Handling
 
 - [VND.error](https://github.com/blongden/vnd.error)
 - [Spring HATEOAS](https://projects.spring.io/spring-hateoas/)
-- [Hypermedia As The Engine Of Application State (HATEOAS) ](https://en.wikipedia.org/wiki/HATEOAS)
+- [Hypermedia As The Engine Of Application State (HATEOAS)](https://en.wikipedia.org/wiki/HATEOAS)
 
 ### Hypermedia
 
@@ -60,11 +55,7 @@ Google Protocol Buffers
 
 ### Cloud Foundry Route Services
 
-/Users/Naoki/src/github.com/cloud-native-java/routing/route-service
-
 ```
-
-
 $ cf login -a https://api.run.pivotal.io
 
 $ cd ~/src/github.com/cloud-native-java/routing/route-service
@@ -72,32 +63,34 @@ $ mvn -f pom.xml clean install
 $ cf push route-service
 $ cf create-user-provided-service route-service -r https://my-route-service.cfapps.io
 
-
 $ cd ~/src/github.com/cloud-native-java/routing/downstream-service
 
 $ cf push downstream-service
 $ cf bind-route-service cfapps.io route-service --hostname cnj-downstream-service
-
-cf bind-route-service cfapps.io route-service --hostname cnj-route-service
-Binding route cnj-route-service.cfapps.io to service instance route-service in org nsegaster-org / space development as nsegaster+pivotal@gmail.com...
-OK
-
-➜  downstream-service git:(master) ✗ cf bind-route-service cfapps.io route-service --hostname my-downstream-service
-Binding route my-downstream-service.cfapps.io to service instance route-service in org nsegaster-org / space development as nsegaster+pivotal@gmail.com...
-OK
-
 ```
-https://docs.cloudfoundry.org/services/route-services.html
-https://docs.pivotal.io/pivotalcf/2-1/services/route-services.html
 
-### Netflix Eureka(https://github.com/Netflix/eureka)
+### Cloud Foundry Route Services
 
-AWS Service registry for resilient mid-tier load balancing and failover.
+[Cloud Foundry Route Services](https://docs.cloudfoundry.org/services/route-services.html)
+
+### [Netflix Eureka](https://github.com/Netflix/eureka)
+
+- AWS Service registry for resilient mid-tier load balancing and failover.
 
 ### [Netflix Ribbon](https://github.com/Netflix/ribbon)
 
 a client-side load balancing library.
 Ribbon is a Inter Process Communication (remote procedure calls) library with built in software load balancers. The primary usage model involves REST calls with various serialization scheme support.
+
+### [Netflix Feign](https://cloud.spring.io/spring-cloud-netflix/)
+
+a library from Netflix that makes deriving service clients as simple as an interface definition and some conventions.
+
+### [Netflix Zuul](https://github.com/Netflix/zuul)
+
+a gateway service that provides dynamic routing, monitoring, resiliency, security, and more.
+
+### [Netflix Prana](https://github.com/Netflix/Prana)
 
 ### [blog-series-building-microservices](http://callistaenterprise.se/blogg/teknik/2015/05/20/blog-series-building-microservices/)
 
@@ -109,9 +102,34 @@ Ribbon is a Inter Process Communication (remote procedure calls) library with bu
 
 ## Chap 8. Edge Services
 
+### Security on the Edge
+
+- [Zuul's architecture](https://www.slideshare.net/MikeyCohen1/zuul-netflix-springone-platform)
+
+### OAuth
+
+- Client, Resource owner, Resource server, Authorization server
+
+### Spring Security
+
+### Spring Cloud Security
+
+#### Securing the Greetings Resource Server
+
+### Build an OAuth-Secured Single-Page Application
+
 ## III. Data Integration
 
 ## Chap 9. Managing Data
+
+Spring Data’s mission is to provide a familiar and consistent, Spring-based programming model for data access while still retaining the special traits of the underlying data store. 
+
+- [Spring Data](http://projects.spring.io/spring-data/)
+- [Spring Data JPA](https://projects.spring.io/spring-data-jpa/)
+- [Spring Data JDBC](https://github.com/nurkiewicz/spring-data-jdbc-repository)
+- [Spring Data MongoDB](https://projects.spring.io/spring-data-mongodb/)
+- [Spring Data Neo4j](https://projects.spring.io/spring-data-neo4j/)
+- [Spring Data Redis](https://projects.spring.io/spring-data-redis/)
 
 ## Chap 10. Messaging
 
@@ -130,7 +148,5 @@ Ribbon is a Inter Process Communication (remote procedure calls) library with bu
 ### ref URL
 
 - [What is username and password when starting Spring Boot with Tomcat?](https://stackoverflow.com/questions/37285016/what-is-username-and-password-when-starting-spring-boot-with-tomcat)
-
 - [Spring Boot boot-features-security](https://docs.spring.io/spring-boot/docs/1.5.9.RELEASE/reference/htmlsingle/#boot-features-security)
-
 - [Spring Cloud Case Study](https://www.infoq.com/presentations/spring-boot-cloud-case-study)
